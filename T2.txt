@@ -1,0 +1,80 @@
+
+==================================================
+   ILLNESS DIAGNOSIS EXPERT SYSTEM  (CM3321)      
+   Flu | Common Cold | Allergy | COVID-19-like | Migraine
+==================================================
+Educational project - NOT a medical diagnosis.
+
+MAIN MENU
+  1. Diagnose me   (full interview, all rules checked)
+  2. Test one illness   (goal-driven backward chaining)
+  3. Forward chaining   (type your symptoms)
+  4. Show the knowledge base (rules and sources)
+  0. Exit
+Enter choice: 1
+
+Please answer the following questions with y or n:
+
+Do you have a fever (high temperature)? (y/n): n
+Do you have chills / feel feverish? (y/n): n
+Do you have a cough? (y/n): y
+Do you have a sore throat? (y/n): y
+Do you have a runny nose? (y/n): y
+Are you sneezing a lot? (y/n): y
+Do you have a stuffy / blocked nose? (y/n): y
+Do you have muscle or body aches? (y/n): n
+Do you feel unusually tired (fatigue)? (y/n): y
+Do you have a headache? (y/n): n
+Is the headache throbbing / pulsing? (y/n): n
+Have you lost / changed your sense of smell? (y/n): n
+Have you lost / changed your sense of taste? (y/n): n
+Do you feel nauseous (sick in the stomach)? (y/n): n
+Are you sensitive to light? (y/n): n
+Are you sensitive to sound? (y/n): n
+Do you have itchy or watery eyes? (y/n): n
+Do you have shortness of breath? (y/n): n
+
+================ DIAGNOSIS RESULT ================
+
+Possible condition: Common Cold   [Rule common_cold-1]
+  Symptoms matched   : sore_throat, sneezing, runny_nose
+  Required absent    : itchy_eyes (not reported)
+  Reasoning          : Sore throat, sneezing and runny nose are usual in a cold, while itchy eyes are rare.
+  Source [s2]         : Mayo Clinic - Common cold or allergy: symptom check
+                       https://www.mayoclinic.org/diseases-conditions/common-cold/expert-answers/common-cold-vs-flu/faq-20057857
+
+Possible condition: Common Cold   [Rule common_cold-2]
+  Symptoms matched   : congestion, sore_throat, cough
+  Required absent    : fever (not reported)
+  Reasoning          : Chart: stuffy nose and sore throat common, cough mild to moderate, fever rare for a cold.
+  Source [s3]         : NIH "Cold, Flu, or Allergy?" symptom chart, reproduced by UF/IFAS Extension
+                       https://blogs.ifas.ufl.edu/gadsdenco/2018/02/07/cold-allergy-or-the-flu/
+
+Possible condition: Common Cold   [Rule common_cold-3]
+  Symptoms matched   : congestion, sneezing, sore_throat
+  Required absent    : fever (not reported)
+  Reasoning          : Chart: stuffy nose, sneezing and sore throat are common in a cold; fever is rare.
+  Source [s6]         : Public-health chart "Coronavirus vs. Cold vs. Flu vs. Allergies" (hosted by Children's Mercy)
+                       https://www.childrensmercy.org/siteassets/media/covid-19/coronavirus-vs-cold-vs-flu-vs-allergies.pdf
+
+Possible condition: Common Cold   [Rule common_cold-4]
+  Symptoms matched   : fatigue, runny_nose, sore_throat
+  Required absent    : itchy_eyes (not reported)
+  Reasoning          : Tiredness sometimes, runny nose and sore throat usually, itchy eyes rarely in a cold.
+  Source [s2]         : Mayo Clinic - Common cold or allergy: symptom check
+                       https://www.mayoclinic.org/diseases-conditions/common-cold/expert-answers/common-cold-vs-flu/faq-20057857
+
+Summary (illness : number of rules that matched):
+  Common Cold : 4 rule(s)
+
+Note: these are POSSIBLE conditions based on published symptom lists.
+It is not a medical diagnosis. Please consult a doctor.
+
+MAIN MENU
+  1. Diagnose me   (full interview, all rules checked)
+  2. Test one illness   (goal-driven backward chaining)
+  3. Forward chaining   (type your symptoms)
+  4. Show the knowledge base (rules and sources)
+  0. Exit
+Enter choice: 0
+Goodbye. Stay healthy!

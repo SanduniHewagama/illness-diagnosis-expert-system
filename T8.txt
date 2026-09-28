@@ -1,0 +1,41 @@
+
+==================================================
+   ILLNESS DIAGNOSIS EXPERT SYSTEM  (CM3321)      
+   Flu | Common Cold | Allergy | COVID-19-like | Migraine
+==================================================
+Educational project - NOT a medical diagnosis.
+
+MAIN MENU
+  1. Diagnose me   (full interview, all rules checked)
+  2. Test one illness   (goal-driven backward chaining)
+  3. Forward chaining   (type your symptoms)
+  4. Show the knowledge base (rules and sources)
+  0. Exit
+Enter choice: 2
+
+Which illness do you want to test?
+  1. Influenza (Flu)
+  2. Common Cold
+  3. Allergy (airborne / seasonal)
+  4. COVID-19-like illness
+  5. Migraine
+Enter number: 1
+
+GOAL: show that Influenza (Flu) is possible (4 rules can prove it).
+I will only ask about symptoms that these rules need.
+
+Do you have a fever (high temperature)? (y/n): n
+
+Facts gathered -> YES: []   NO: [fever]
+
+GOAL FAILED: none of the 4 rules for Influenza (Flu) could be satisfied.
+Hypothesis rejected (based on the answers given).
+
+MAIN MENU
+  1. Diagnose me   (full interview, all rules checked)
+  2. Test one illness   (goal-driven backward chaining)
+  3. Forward chaining   (type your symptoms)
+  4. Show the knowledge base (rules and sources)
+  0. Exit
+Enter choice: 0
+Goodbye. Stay healthy!

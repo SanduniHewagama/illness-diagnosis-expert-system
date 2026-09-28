@@ -1,0 +1,61 @@
+
+==================================================
+   ILLNESS DIAGNOSIS EXPERT SYSTEM  (CM3321)      
+   Flu | Common Cold | Allergy | COVID-19-like | Migraine
+==================================================
+Educational project - NOT a medical diagnosis.
+
+MAIN MENU
+  1. Diagnose me   (full interview, all rules checked)
+  2. Test one illness   (goal-driven backward chaining)
+  3. Forward chaining   (type your symptoms)
+  4. Show the knowledge base (rules and sources)
+  0. Exit
+Enter choice: 3
+
+Type the symptoms you have, separated by commas.
+Valid symptoms: fever, chills, cough, sore_throat, runny_nose, sneezing, congestion, body_ache, fatigue, headache, throbbing_headache, loss_of_smell, loss_of_taste, nausea, light_sensitivity, sound_sensitivity, itchy_eyes, shortness_of_breath
+Symptoms: fever, chills, cough, body ache, headache, fatigue, toothache
+Ignored (not in knowledge base): toothache
+
+Working memory (facts): [fever, chills, cough, body_ache, headache, fatigue]
+
+Cycle 1: all conditions of rule flu-1 are satisfied -> rule FIRES, flu is suspected.
+Cycle 2: all conditions of rule flu-2 are satisfied -> rule FIRES, flu is suspected.
+Cycle 3: all conditions of rule flu-3 are satisfied -> rule FIRES, flu is suspected.
+Cycle 4: no further rule can fire. Forward chaining stops.
+
+================ DIAGNOSIS RESULT ================
+
+Possible condition: Influenza (Flu)   [Rule flu-1]
+  Symptoms matched   : fever, body_ache, headache
+  Reasoning          : Chart lists fever (severe, usually high), headache (common) and general aches (usual) for flu.
+  Source [s3]         : NIH "Cold, Flu, or Allergy?" symptom chart, reproduced by UF/IFAS Extension
+                       https://blogs.ifas.ufl.edu/gadsdenco/2018/02/07/cold-allergy-or-the-flu/
+
+Possible condition: Influenza (Flu)   [Rule flu-2]
+  Symptoms matched   : fever, chills, cough
+  Reasoning          : CDC lists fever/chills and cough among the usual flu symptoms.
+  Source [s1]         : CDC - Similarities and Differences between Flu and COVID-19
+                       https://www.cdc.gov/flu/about/flu-vs-covid19.html
+
+Possible condition: Influenza (Flu)   [Rule flu-3]
+  Symptoms matched   : fever, body_ache, fatigue
+  Reasoning          : Chart lists fever, usual body aches and usual fatigue (up to 3 weeks) for flu.
+  Source [s3]         : NIH "Cold, Flu, or Allergy?" symptom chart, reproduced by UF/IFAS Extension
+                       https://blogs.ifas.ufl.edu/gadsdenco/2018/02/07/cold-allergy-or-the-flu/
+
+Summary (illness : number of rules that matched):
+  Influenza (Flu) : 3 rule(s)
+
+Note: these are POSSIBLE conditions based on published symptom lists.
+It is not a medical diagnosis. Please consult a doctor.
+
+MAIN MENU
+  1. Diagnose me   (full interview, all rules checked)
+  2. Test one illness   (goal-driven backward chaining)
+  3. Forward chaining   (type your symptoms)
+  4. Show the knowledge base (rules and sources)
+  0. Exit
+Enter choice: 0
+Goodbye. Stay healthy!

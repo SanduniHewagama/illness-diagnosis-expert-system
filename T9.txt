@@ -1,0 +1,78 @@
+
+==================================================
+   ILLNESS DIAGNOSIS EXPERT SYSTEM  (CM3321)      
+   Flu | Common Cold | Allergy | COVID-19-like | Migraine
+==================================================
+Educational project - NOT a medical diagnosis.
+
+MAIN MENU
+  1. Diagnose me   (full interview, all rules checked)
+  2. Test one illness   (goal-driven backward chaining)
+  3. Forward chaining   (type your symptoms)
+  4. Show the knowledge base (rules and sources)
+  0. Exit
+Enter choice: 2
+
+Which illness do you want to test?
+  1. Influenza (Flu)
+  2. Common Cold
+  3. Allergy (airborne / seasonal)
+  4. COVID-19-like illness
+  5. Migraine
+Enter number: 5
+
+GOAL: show that Migraine is possible (4 rules can prove it).
+I will only ask about symptoms that these rules need.
+
+Do you have a headache? (y/n): y
+Is the headache throbbing / pulsing? (y/n): y
+Do you feel nauseous (sick in the stomach)? (y/n): y
+Are you sensitive to light? (y/n): y
+Are you sensitive to sound? (y/n): y
+
+Facts gathered -> YES: [headache, throbbing_headache, nausea, light_sensitivity, sound_sensitivity]   NO: []
+
+GOAL PROVED: 4 of 4 rules for Migraine are satisfied.
+
+================ DIAGNOSIS RESULT ================
+
+Possible condition: Migraine   [Rule migraine-1]
+  Symptoms matched   : headache, throbbing_headache, nausea
+  Reasoning          : Mayo Clinic: migraine pain throbs or pulses and is accompanied by nausea.
+  Source [s4]         : Mayo Clinic - Migraine: Symptoms and causes
+                       https://www.mayoclinic.org/diseases-conditions/migraine-headache/symptoms-causes/syc-20360201
+
+Possible condition: Migraine   [Rule migraine-2]
+  Symptoms matched   : headache, light_sensitivity, sound_sensitivity
+  Reasoning          : Mayo Clinic: migraine headache comes with sensitivity to light and sound.
+  Source [s4]         : Mayo Clinic - Migraine: Symptoms and causes
+                       https://www.mayoclinic.org/diseases-conditions/migraine-headache/symptoms-causes/syc-20360201
+  Source [s7]         : Mayo Clinic News Network - What is a migraine headache?
+                       https://newsnetwork.mayoclinic.org/discussion/what-is-a-migraine-headache/
+
+Possible condition: Migraine   [Rule migraine-3]
+  Symptoms matched   : headache, light_sensitivity, nausea
+  Reasoning          : Mayo Clinic: migraine headache with light sensitivity and nausea.
+  Source [s4]         : Mayo Clinic - Migraine: Symptoms and causes
+                       https://www.mayoclinic.org/diseases-conditions/migraine-headache/symptoms-causes/syc-20360201
+
+Possible condition: Migraine   [Rule migraine-4]
+  Symptoms matched   : headache, throbbing_headache, sound_sensitivity
+  Reasoning          : Mayo Clinic: throbbing migraine headache with sensitivity to sound.
+  Source [s4]         : Mayo Clinic - Migraine: Symptoms and causes
+                       https://www.mayoclinic.org/diseases-conditions/migraine-headache/symptoms-causes/syc-20360201
+
+Summary (illness : number of rules that matched):
+  Migraine : 4 rule(s)
+
+Note: these are POSSIBLE conditions based on published symptom lists.
+It is not a medical diagnosis. Please consult a doctor.
+
+MAIN MENU
+  1. Diagnose me   (full interview, all rules checked)
+  2. Test one illness   (goal-driven backward chaining)
+  3. Forward chaining   (type your symptoms)
+  4. Show the knowledge base (rules and sources)
+  0. Exit
+Enter choice: 0
+Goodbye. Stay healthy!
